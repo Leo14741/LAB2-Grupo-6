@@ -1,0 +1,64 @@
+artistas:
+SELECT * FROM conciertosperu.artistas;
+Insert into artistas (idArtistas,Nombre_Grupo,Fecha_creacion,Tipo_musica) values (1,"Grupo 5","1992-04-08","cumbia");
+INSERT INTO `conciertosperu`.`artistas` (`idArtistas`, `Nombre_Grupo`, `Fecha_creacion`) VALUES ('2', 'Hermanos Yaipén', '1992-04-09');
+INSERT INTO `conciertosperu`.`artistas` (`idArtistas`, `Nombre_Grupo`, `Fecha_creacion`) VALUES ('3', 'Armonía 10', '1993-04-08');
+INSERT INTO `conciertosperu`.`artistas` (`idArtistas`, `Nombre_Grupo`, `Fecha_creacion`) VALUES ('4', 'Tame Impala', '1992-07-08');
+INSERT INTO `conciertosperu`.`artistas` (`idArtistas`, `Nombre_Grupo`, `Fecha_creacion`) VALUES ('5', 'Twenty One Pilots', '1992-04-12');
+INSERT INTO `conciertosperu`.`artistas` (`idArtistas`, `Nombre_Grupo`, `Fecha_creacion`) VALUES ('6', 'Grupo 6', '1988-04-01');
+INSERT INTO `conciertosperu`.`artistas` (`idArtistas`, `Nombre_Grupo`, `Fecha_creacion`) VALUES ('7', 'Bon Jovi', '1997-04-11');
+INSERT INTO `conciertosperu`.`artistas` (`idArtistas`, `Nombre_Grupo`, `Fecha_creacion`) VALUES ('8', 'Agua Marina', '1990-02-08');
+INSERT INTO `conciertosperu`.`artistas` (`idArtistas`, `Nombre_Grupo`, `Fecha_creacion`) VALUES ('9', 'Joji', '1983-04-13');
+INSERT INTO `conciertosperu`.`artistas` (`idArtistas`, `Nombre_Grupo`, `Fecha_creacion`) VALUES ('10', 'Los Javascript', '2003-10-15');
+UPDATE `conciertosperu`.`artistas` SET `Tipo_musica` = 'cumbia' WHERE (`idArtistas` = '2');
+UPDATE `conciertosperu`.`artistas` SET `Tipo_musica` = 'rock' WHERE (`idArtistas` = '3');
+UPDATE `conciertosperu`.`artistas` SET `Tipo_musica` = 'pop' WHERE (`idArtistas` = '4');
+UPDATE `conciertosperu`.`artistas` SET `Tipo_musica` = 'rock' WHERE (`idArtistas` = '5');
+UPDATE `conciertosperu`.`artistas` SET `Tipo_musica` = 'salsa' WHERE (`idArtistas` = '6');
+UPDATE `conciertosperu`.`artistas` SET `Tipo_musica` = 'rock' WHERE (`idArtistas` = '7');
+UPDATE `conciertosperu`.`artistas` SET `Tipo_musica` = 'bachata' WHERE (`idArtistas` = '8');
+UPDATE `conciertosperu`.`artistas` SET `Tipo_musica` = 'balada' WHERE (`idArtistas` = '9');
+UPDATE `conciertosperu`.`artistas` SET `Tipo_musica` = 'salsa' WHERE (`idArtistas` = '10');
+
+
+integrantes:
+
+SELECT * FROM conciertosperu.integrantes;
+Insert into integrantes (idIntegrantes,Nombre,Edad,Anhios_exp,rol,artistas_idArtistas) values (2,"Elmer Yaipen","55","25","baterista",1);
+INSERT INTO `conciertosperu`.`integrantes` (`idIntegrantes`, `Nombre`, `Edad`, `Anhios_exp`, `rol`, `artistas_idArtistas`) VALUES ('3', 'Jon Bon Jovi', '56', '23', 'cantante', '2');
+INSERT INTO `conciertosperu`.`integrantes` (`idIntegrantes`, `Nombre`, `Edad`, `Anhios_exp`, `rol`, `artistas_idArtistas`) VALUES ('4', 'José García', '22', '2', 'guitarrista', '3');
+INSERT INTO `conciertosperu`.`integrantes` (`idIntegrantes`, `Nombre`, `Edad`, `Anhios_exp`, `rol`, `artistas_idArtistas`) VALUES ('5', 'Lucho Ramos', '23', '4', 'bajista', '4');
+INSERT INTO `conciertosperu`.`integrantes` (`idIntegrantes`, `Nombre`, `Edad`, `Anhios_exp`, `rol`, `artistas_idArtistas`) VALUES ('6', 'Tony Rosado', '40', '15', 'cantante', '5');
+INSERT INTO `conciertosperu`.`integrantes` (`idIntegrantes`, `Nombre`, `Edad`, `Anhios_exp`, `rol`, `artistas_idArtistas`) VALUES ('7', 'Alex Lora', '55', '13', 'baterista', '6');
+INSERT INTO `conciertosperu`.`integrantes` (`idIntegrantes`, `Nombre`, `Edad`, `Anhios_exp`, `rol`, `artistas_idArtistas`) VALUES ('8', 'Axl Rose', '50', '34', 'trompetista', '7');
+INSERT INTO `conciertosperu`.`integrantes` (`idIntegrantes`, `Nombre`, `Edad`, `Anhios_exp`, `rol`, `artistas_idArtistas`) VALUES ('9', 'Adele', '38', '23', 'flautista', '8');
+INSERT INTO `conciertosperu`.`integrantes` (`idIntegrantes`, `Nombre`, `Edad`, `Anhios_exp`, `rol`, `artistas_idArtistas`) VALUES ('10', 'Rodrigo Barrios', '20', '1', 'arpista', '9');
+INSERT INTO `conciertosperu`.`integrantes` (`idIntegrantes`, `Nombre`, `Edad`, `Anhios_exp`, `rol`, `artistas_idArtistas`) VALUES ('11', 'José José', '68', '50', 'coro', '10');
+
+
+concierto:
+
+SELECT * FROM conciertosperu.concierto;
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('1', '2023-05-06', '1', '1');
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('2', '2023-12-20', '2', '2');
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('3', '2024-03-12', '3', '3');
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('4', '2023-07-15', '4', '4');
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('5', '2023-05-15', '5', '5');
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('6', '2025-05-13', '6', '6');
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('7', '2024-12-19', '7', '7');
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('8', '2023-05-23', '8', '8');
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('9', '2024-11-14', '9', '9');
+INSERT INTO `conciertosperu`.`concierto` (`idConcierto`, `Fecha_evento`, `proveedores_idProveedores`, `artistas_idArtistas`) VALUES ('10', '2025-10-03', '10', '10');
+
+proveedores:
+SELECT * FROM conciertosperu.proveedores;
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('11', 'PUCP', '989656556', 'Universidad');
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('12', 'UP', '955615615', 'Universidad');
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('13', 'UNI', '984151515', 'Universidad');
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('14', 'Ripley', '933551665', 'ropa');
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('15', 'Falabella', '921566226', 'ropa');
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('16', 'HP', '954451122', 'tecnología');
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('17', 'Apple', '953265512', 'tecnología');
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('18', 'Microsoft', '956626546', 'tecnología');
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('19', 'Dell', '988874212', 'tecnología');
+INSERT INTO `conciertosperu`.`proveedores` (`idProveedores`, `Nombre`, `Telefono`, `Elemento`) VALUES ('20', 'ASUS', '965454545', 'tecnología');
