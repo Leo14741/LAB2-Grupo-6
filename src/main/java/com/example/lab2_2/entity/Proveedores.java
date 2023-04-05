@@ -13,8 +13,6 @@ import lombok.Setter;
 @Table(name="proveedores")
 public class Proveedores {
 
-    //idProveedores,Nombre,Telefono,Elemento
-
     @Id
     int idProveedores;
     String nombre;
