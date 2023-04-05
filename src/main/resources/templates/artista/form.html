@@ -14,14 +14,22 @@
   <hr/>
   <form method="post" th:action="@{/artista/guardar}">
     <div class="mb-3">
-      <label for="companyName">Nombre del Artista</label>
-      <input name="companyName" type="text" class="form-control" id="companyName">
+      <label for="artistaName">Nombre del Artista</label>
+      <input name="artistaName" type="text" class="form-control" id="artistaName">
     </div>
     <div class="mb-3">
-      <label for="phone">Nombre del Grupo</label>
-      <input name="phone" type="text" class="form-control" id="phone">
+      <label for="nombreGrupo">Nombre del Grupo</label>
+      <input name="nombreGrupo" type="text" class="form-control" id="nombreGrupo">
     </div>
-    <a th:href="@{/shipper/listar}" class="btn btn-danger">Cancelar</a>
+    <div class="mb-3">
+      <label for="fecha">Fecha de Creacion</label>
+      <input name="fecha" type="text" class="form-control" id="fecha">
+    </div>
+    <div class="mb-3">
+      <label for="tipo">Tipo de Música</label>
+      <input name="tipo" type="text" class="form-control" id="tipo">
+    </div>
+    <a th:href="@{/artista/listar}" class="btn btn-danger">Cancelar</a>
     <button type="submit" class="btn btn-primary">Registrar</button>
   </form>
 </div>
